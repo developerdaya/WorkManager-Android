@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/gps_1" />
+
+
+    <TextView
+        android:id="@+id/mGPSTracingApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:text="GPS Tracing App"
+        android:textColor="#5A73A5"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lottieAnimationView"
+        app:layout_constraintStart_toEndOf="@+id/lottieAnimationView"
+        app:layout_constraintTop_toTopOf="@+id/lottieAnimationView" />
+
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/mSwitchCompat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Toggle Service"
+        android:textColor="#5A73A5"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/mGPSTracingApp"
+        app:layout_constraintTop_toBottomOf="@+id/mGPSTracingApp" />
+
+
+    <TextView
+        android:id="@+id/lastUnlockedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:drawablePadding="7dp"
+        android:drawableStart="@drawable/baseline_lock_open_24"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Last Unlocked Time: "
+        android:textColor="#5A73A5"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView" />
+
+
+    <TextView
+        android:id="@+id/lastUnlockedTime2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:drawablePadding="7dp"
+        android:gravity="center"
+        android:text="__ __ __"
+        android:textColor="#5A73A5"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lastUnlockedTime"
+        app:layout_constraintStart_toEndOf="@+id/lastUnlockedTime"
+        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView" />
+
+
+
+
+      <TextView
+        android:id="@+id/mLastKnownLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:drawablePadding="7dp"
+        android:drawableStart="@drawable/baseline_location_pin_24"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Last Known Location: "
+        android:textColor="#5A73A5"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastUnlockedTime" />
+
+
+       <TextView
+        android:id="@+id/mDeleteDatabase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:drawablePadding="7dp"
+        android:drawableStart="@drawable/baseline_delete_forever_24"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Delete all data"
+        android:textColor="#5A73A5"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mLastKnownLocation" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/mLastKnownLocation2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:gravity="center"
+        android:text="__ __ __"
+        android:textColor="#5A73A5"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/mLastKnownLocation"
+        app:layout_constraintTop_toTopOf="@+id/mLastKnownLocation"
+        app:layout_constraintBottom_toBottomOf="@+id/mLastKnownLocation"
+        />
+
+    <Button
+        android:id="@+id/btnTurnOnGps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enable GPS"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mGPSTracingApp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mGPSTracingApp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mDeleteDatabase"
+        tools:listitem="@layout/location_item" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

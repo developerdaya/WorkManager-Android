@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:background="@drawable/bg_round"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GPS Location Permission"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:textAlignment="center"
+        android:layout_marginBottom="16dp"
+        />
+
+
+    <TextView
+        android:id="@+id/camera_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="It is necessary to turn on GPS, Please enable from your settings"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:paddingHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:id="@+id/mCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_round_5dp"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="Cancel"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:id="@+id/mSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go to Setting"
+            android:gravity="center"
+            android:layout_marginStart="50dp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="10dp"
+            android:background="@drawable/bg_round_5dp"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
