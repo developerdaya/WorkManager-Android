@@ -21,7 +21,7 @@ Add it in your root build.gradle at the end of repositories:
 	dependencies {
 	        implementation 'com.github.developerdaya:GPSWorkManagerExample:Tag'
 	}
-## 3. Build the project and run it on an Android device or emulator.
+## 4. Build the project and run it on an Android device or emulator.
    
  ### Key Components of the GPS Tracking App:
 - **Tracking Service**: The app continuously tracks the user's GPS location and logs it in the background.
